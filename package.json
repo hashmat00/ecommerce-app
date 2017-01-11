@@ -1,0 +1,19 @@
+{
+  "name": "amazonapp",
+  "version": "1.0.0",
+  "description": "this is amazon ecommerce app type",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecommerce",
+    "amaon",
+    "clone"
+  ],
+  "author": "hahsmatullah mohammadi",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}

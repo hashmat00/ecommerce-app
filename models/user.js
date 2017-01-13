@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
-var bcrypt = require("bcrypt");
-var passportLocalMongoose = require('passport-local-mongoose');
+var bcrypt = require("bcrypt-nodejs");
+// var passportLocalMongoose = require('passport-local-mongoose');
 var Schema = mongoose.Schema;
 
 
@@ -55,3 +55,7 @@ UserSchema.methods.comparePassword = function(password) {
 //     var user = this;
 //     user.name = 'specify name';
 // });
+
+
+
+module.exports = mongoose.model('User', UserSchema);

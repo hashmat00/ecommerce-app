@@ -11,7 +11,7 @@ var app = express();
 
 mongoose.connect("mongodb://localhost/ecommerce");
 
-app.use(express.static('public'));
+app.use(express.static(__dirname + "/public"));
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));

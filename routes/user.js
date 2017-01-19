@@ -19,13 +19,13 @@ router.post('/signup', function(req, res, next){
     
     User.findOne({email: req.body.email}, function(err, existingUser){
         if(existingUser){
-            console.log(req.body.email + 'is already exist');
+            req.flash('error', 'User is already exist');
             res.redirect('/signup');
         }else{
             user.save(function(err, user){
                 if(err) return next(err);
                 
-                res.json("New user has been created");
+                res.redirect('/');
             });
         }
     });
